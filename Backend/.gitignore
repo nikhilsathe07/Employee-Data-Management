@@ -22,6 +22,7 @@ debug.log
 dist/
 build/
 coverage/
+node_modules
 
 # -----------------------
 # React (Frontend - e.g., /client)
