@@ -34,11 +34,14 @@ const AddEmployeeModal = ({ isOpen, onClose, onAddEmployee }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/employees", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://employee-data-management-qyg7.onrender.com/api/employees",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
       if (response.ok) {
         onAddEmployee();
         setFormData({ name: "", email: "", position: "" });

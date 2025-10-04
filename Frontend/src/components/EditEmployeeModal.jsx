@@ -46,7 +46,7 @@ const EditEmployeeModal = ({ employee, isOpen, onClose, onUpdate }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/employees/${employee._id}`,
+        `https://employee-data-management-qyg7.onrender.com/api/employees/${employee._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

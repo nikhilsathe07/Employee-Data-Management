@@ -5,7 +5,7 @@ const EmployeeTable = ({ employees, fetchEmployees, onEdit }) => {
     if (window.confirm("Are you sure you want to delete this employee?")) {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/employees/${id}`,
+          `https://employee-data-management-qyg7.onrender.com/api/employees/${id}`,
           {
             method: "DELETE",
           }

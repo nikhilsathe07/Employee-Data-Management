@@ -16,7 +16,9 @@ function App() {
 
   const fetchEmployees = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/employees");
+      const response = await fetch(
+        "https://employee-data-management-qyg7.onrender.com/api/employees"
+      );
       if (!response.ok) throw new Error("Failed to fetch employees");
       const data = await response.json();
       setEmployees(data);
@@ -27,7 +29,9 @@ function App() {
 
   const fetchPositions = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/positions");
+      const response = await fetch(
+        "https://employee-data-management-qyg7.onrender.com/api/positions"
+      );
       if (!response.ok) throw new Error("Failed to fetch positions");
       const data = await response.json();
       setPositions(data);
