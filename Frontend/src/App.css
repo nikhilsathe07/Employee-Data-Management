@@ -1,0 +1,99 @@
+/* ===== Base Styles ===== */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #007bff;
+  --text-color: #333;
+  --light-gray: #f8f9fa;
+  --border-radius: 4px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --max-width: 1200px;
+  --padding-sm: 10px;
+  --padding-md: 15px;
+  --padding-lg: 20px;
+  --margin-sm: 10px;
+  --margin-md: 20px;
+  --margin-lg: 30px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: var(--margin-sm);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-xl); }
+h2 { font-size: calc(var(--font-lg) + 2px); }
+h3 { font-size: var(--font-lg); }
+h4 { font-size: var(--font-md); }
+
+p {
+  margin-bottom: var(--margin-sm);
+}
+
+/* ===== Layout ===== */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-md);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  :root {
+    --font-xl: 22px;
+    --font-lg: 16px;
+    --padding-md: var(--padding-sm);
+    --margin-md: var(--margin-sm);
+  }
+
+  .container {
+    padding: 0 var(--padding-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-xl: 20px;
+    --font-lg: 15px;
+    --padding-md: var(--padding-sm);
+  }
+}
+
+/* ===== Utility Classes ===== */
+.text-center { text-align: center; }
+.mt-sm { margin-top: var(--margin-sm); }
+.mt-md { margin-top: var(--margin-md); }
+.mt-lg { margin-top: var(--margin-lg); }
+.mb-sm { margin-bottom: var(--margin-sm); }
+.mb-md { margin-bottom: var(--margin-md); }
+.mb-lg { margin-bottom: var(--margin-lg); }
+.p-sm { padding: var(--padding-sm); }
+.p-md { padding: var(--padding-md); }
+.p-lg { padding: var(--padding-lg); }
+.rounded { border-radius: var(--border-radius); }
+.shadow { box-shadow: var(--box-shadow); }
